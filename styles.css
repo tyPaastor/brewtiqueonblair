@@ -1,0 +1,124 @@
+/* Ingram Mono Custom Web Font */
+@font-face {
+    font-family: 'IngramMono';
+    src: url('./webfonts/ingram-mono-regular.woff2') format('woff2'),
+         url('./webfonts/ingram-mono-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap; /* good for performance */
+  }
+
+  body {
+    font-family: 'IngramMono', sans-serif;
+  }
+  
+/* Fullscreen hero background */
+.hero {
+    background: url('/img/bg-img.jpg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Optional: dark overlay for text readability */
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+  }
+  
+  /* Navbar overrides */
+  .navbar {
+    z-index: 1000;
+  }
+  
+  .navbar .nav-link {
+    color: white;
+    margin-left: 1rem;
+  }
+  
+  .navbar .nav-link:hover {
+    color: #ddd;
+  }
+  
+  /* Responsive logo */
+  .navbar-brand img {
+    height: 70px;
+  }
+  
+  .about-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    color: #000;
+    line-height: 1.6;
+  }
+  
+  .about-section img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .bg-secondary {
+    background-color: #7f7f7f !important; /* You can use your own grey here */
+  }
+  
+  .bg-grey {
+    background-color: #7f7f7f;
+  }
+
+  .btn {
+    background-color: transparent;
+    color: #fff;
+  }
+
+  .btn + .btn {
+    margin-left: 1rem;
+  }
+  
+  @media (max-width: 576px) {
+    .btn + .btn {
+      margin-left: 0;
+      margin-top: 0.75rem;
+    }
+  }
+
+  .btn:hover {
+    background-color: #fff;
+    color: #7f7f7f;
+  }
+
+  footer {
+    background-color: #7f7f7f;
+  }
+
+  th, td {
+    background-color: transparent!important;
+    color: #fff!important;
+  }
+
+  /* Show dropdown on hover */
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  background-color: transparent;
+  border: none;
+}
+
+/* Optional: fix flickering in some browsers */
+.hover-dropdown .dropdown-toggle::after {
+  pointer-events: none;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+  border: none;
+}
